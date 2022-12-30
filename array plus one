@@ -2,9 +2,9 @@ import java.util.Arrays;
 
 public class test {
     public static void main(String[] args) {
-        //intial given array
-        int[] arr = { 4, 3, 2, 1 };
-        //converting the initial array to digit
+        // intial given array
+        int[] arr = { 9 };
+        // converting the initial array to digit
         int store = arr.length;
         int nums = 0;
         int newnum = 0;
@@ -15,31 +15,31 @@ public class test {
             newnum += nums;
         }
         int newest_value = newnum + 1;
-        //converting the digit to array in reversed digit form
-        int[] new_arr = new int[4];
+        // converting the digit to array in reversed digit form
+        int[] new_arr = new int[arr.length + 1];
         for (int j = 0; j < new_arr.length; j++) {
             if (newest_value > 0) {
                 new_arr[j] = newest_value % 10;
             }
             newest_value = newest_value / 10;
         }
-        //converting reversed digit array to digit
+        // converting reversed digit array to digit
         int finalstore = new_arr.length;
         int finalnums = 0;
         int finalnewnum = 0;
-        for(int k = 0; k<new_arr.length; k++)
-        {
+        for (int k = 0; k < new_arr.length; k++) {
             finalnums = new_arr[k] * (int) (Math.pow(10, finalstore - 1));
             finalstore--;
             finalnewnum += finalnums;
         }
-        //converting the previous digit to array in reverse of digit
-        int[] finalnew_arr = new int[4];
+        // converting the previous digit to array in reverse of digit
+        int[] finalnew_arr = new int[arr.length + 1];
         for (int l = 0; l < new_arr.length; l++) {
             if (finalnewnum > 0) {
                 finalnew_arr[l] = finalnewnum % 10;
             }
             finalnewnum = finalnewnum / 10;
-        }System.out.println(Arrays.toString(finalnew_arr));
+        }
+        System.out.println(Arrays.toString(finalnew_arr));
     }
 }

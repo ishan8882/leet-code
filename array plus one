@@ -16,7 +16,7 @@ public class test {
         }
         int newest_value = newnum + 1;
         //converting the digit to array in reversed digit form
-        int[] new_arr = { 0, 0, 0, 0 };
+        int[] new_arr = new int[4];
         for (int j = 0; j < new_arr.length; j++) {
             if (newest_value > 0) {
                 new_arr[j] = newest_value % 10;
@@ -34,7 +34,7 @@ public class test {
             finalnewnum += finalnums;
         }
         //converting the previous digit to array in reverse of digit
-        int[] finalnew_arr = { 0, 0, 0, 0 };
+        int[] finalnew_arr = new int[4];
         for (int l = 0; l < new_arr.length; l++) {
             if (finalnewnum > 0) {
                 finalnew_arr[l] = finalnewnum % 10;
